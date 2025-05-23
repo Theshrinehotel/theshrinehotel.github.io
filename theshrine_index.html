@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Shrine Hotel, Omkareshwar - A Sacred Stay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Dark blue/grey for headings */
+            --secondary-color: #27ae60; /* Green for buttons/accents */
+            --text-color: #333;
+            --background-color: #f8f8f8;
+            --header-bg: #3a3a3a; /* Dark grey for header */
+            --white: #ffffff;
+            --light-grey: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--header-bg);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-weight: 300;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: var(--light-grey);
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 960px;
+            margin: auto;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        section:first-of-type {
+            margin-top: 1.5rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .button {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 0.75rem 1.8rem;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #219653; /* Slightly darker green */
+        }
+
+        .room-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .room-details .text-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .room-details .image-wrapper {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .room-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .rates-info {
+            background: var(--light-grey);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .rates-info strong {
+            color: var(--primary-color);
+        }
+
+        .facilities-list, .policy-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .facilities-list li, .policy-list li {
+            background: var(--background-color);
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .facilities-list li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            margin-right: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .policy-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            margin-right: 0.8rem;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px; /* Increased height for better view */
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: var(--header-bg);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .tagline {
+                font-size: 0.9rem;
+            }
+            section {
+                padding: 1.5rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            .facilities-list, .policy-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Shrine Hotel, Omkareshwar</h1>
+        <p>500m from Omkareshwar Temple | Near SBI Bank, Main Temple Road</p>
+        <p class="tagline">"A sacred stay for soulful guests – Welcome to The Shrine Hotel!"</p>
+    </header>
+
+    <section id="rooms">
+        <h2>Our Rooms</h2>
+        <div class="room-details">
+            <div class="image-wrapper">
+                <img src="images/room_wide.jpg" alt="Deluxe Room Wide View" class="room-image" />
+            </div>
+            <div class="text-content">
+                <h3>Deluxe Room</h3>
+                <p>Experience comfort and tranquility in our well-appointed Deluxe Rooms, designed to offer a peaceful retreat after a day of spiritual exploration.</p>
+                <ul>
+                    <li>Spacious and Air-Conditioned</li>
+                    <li>Comfortable Queen-sized Bed</li>
+                    <li>Attached Private Washroom with Geyser (Hot/Cold Water)</li>
+                    <li>Flat-screen TV with Satellite Channels</li>
+                    <li>Wardrobe and Sitting Area</li>
+                </ul>
+                <div class="rates-info">
+                    <strong>Rate:</strong> ₹2500 (Weekdays) | ₹3000 (Weekends)<br>
+                    <strong>Check-in:</strong> 12:00 PM | <strong>Check-out:</strong> 11:00 AM
+                </div>
+                <a href="https://wa.me/918085896071" class="button" target="_blank">Book Your Sacred Stay on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities">
+        <h2>Facilities</h2>
+        <ul class="facilities-list">
+            <li>Free Wi-Fi (High-Speed)</li>
+            <li>Free Onsite Parking</li>
+            <li>Room Service (Limited duration)</li>
+            <li>Laundry Service (Paid)</li>
+            <li>Air Conditioning (Room controlled)</li>
+            <li>Housekeeping</li>
+            <li>Smoke Detector (Lobby Area)</li>
+            <li>Luggage Storage</li>
+            <li>Concierge Services</li>
+            <li>Multilingual Staff</li>
+            <li>Luggage Assistance</li>
+            <li>Doctor on Call (24/7)</li>
+            <li>Paid Airport Transfers</li>
+            <li>CCTV Surveillance</li>
+            <li>Fire Extinguishers</li>
+            <li>24-hour Front Desk</li>
+            <li>Daily Sanitization</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="images/hotel_exterior.jpg" alt="The Shrine Hotel Exterior" />
+            <img src="images/room_bed.jpg" alt="Deluxe Room Bed Setup" />
+            <img src="images/room_entry_tv.jpg" alt="Deluxe Room TV Area and Entry" />
+            <img src="images/washroom.jpg" alt="Clean Washroom" />
+            <img src="images/lobby.jpg" alt="Hotel Lobby/Reception" />
+            </div>
+    </section>
+
+    <section id="policies">
+        <h2>Hotel Policies</h2>
+        <ul class="policy-list">
+            <li><strong>ID Requirement:</strong> Valid Government-issued ID required at check-in. Local ID not accepted.</li>
+            <li><strong>Couples Policy:</strong> Unmarried couples allowed (with valid ID proof).</li>
+            <li><strong>Smoking:</strong> No smoking allowed in public areas or inside rooms (designated smoking areas might be available).</li>
+            <li><strong>Alcohol:</strong> Consumption of alcohol is not permitted on hotel premises.</li>
+            <li><strong>Pets:</strong> Pets are not allowed.</li>
+            <li><strong>Extra Mattress:</strong> Extra mattress available at ₹850 (for Adults) and ₹350 (for Children).</li>
+            <li><strong>Cancellation Policy:</strong> Free cancellation up to 24 hours before check-in time. Please refer to your booking confirmation for specific details.</li>
+        </ul>
+    </section>
+
+    <section id="location">
+        <h2>Location & Contact</h2>
+        <p>The Shrine Hotel is conveniently located just 500m from the sacred Omkareshwar Temple, making it an ideal choice for pilgrims and tourists.</p>
+        <p><strong>Address:</strong> Near SBI Bank, Main Temple Road, Omkareshwar, Madhya Pradesh</p>
+        <p><strong>WhatsApp for Booking:</strong> <a href="https://wa.me/918085896071" target="_blank">+91 8085896071</a></p>
+        <br>
+        <iframe src="https://maps.app.goo.gl/Bj7Y8tC3LKnHVGjZA" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <p>© 2025 The Shrine Hotel, Omkareshwar. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
